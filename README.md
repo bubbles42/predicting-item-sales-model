@@ -65,8 +65,26 @@ Though it would be dependent upon what the stakeholders requirements are for the
 would need a little more tuning or possibly even test out some other algorithms to see if we can imporove the 
 overall results of the models predictions.
 
-
 ## Recommendations:
+![top3 coeffs](https://github.com/bubbles42/predicting-item-sales-model/assets/115664524/f28058ed-a116-4ae9-99aa-67b4a47f8a26)
+> Our top 3 coefficients are:
+> - Outlet_Type_Supermarket Type3
+> - Outlet_Identifier_OUT027
+> - Item_MRP
+> All of these are showing stong positive coefficients, meaning they have a positive correlation with our target.
+
+![top5 feat](https://github.com/bubbles42/predicting-item-sales-model/assets/115664524/d6d8d7b1-ae1a-4caf-aa0e-dcc8db3e0a95)
+> Our top 5 Features (R.F.):
+>  - Item_MRP
+>  - Item_Visbility
+>  - Outlet_Type_Supermarket Type1
+>  - Item_Weight
+>  - Outlet_Identifier_OUT027
+>    We can see that the top 3 permutation importances can also be found within the R.F. importances. The only
+>    2 that are different include:
+>    - Outlet_Type_Supermarket Type3
+>    - Outlet_Establishment_Year
+
 
 I would recommend the Random Forest model, as it seems to be improving with the fine tuning, 
 and started off at a better performace level than the linear regression model.
