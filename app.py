@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from io import StringIO
 
 # Load your cleaned dataset
 df = pd.read_csv("data/sales_predictions_cleaned.csv")
@@ -19,7 +20,7 @@ if st.button("Show Descriptive Statistics"):
 # Dataset Information
 st.header("Dataset Information")
 if st.button("Show Dataset Info"):
-    buffer = io.StringIO()
+    buffer = StringIO()
     df.info(buf=buffer)
     s = buffer.getvalue()
     st.text(s)
